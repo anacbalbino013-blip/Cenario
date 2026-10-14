@@ -1,0 +1,434 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #42b9ed;
+    overflow-x: hidden;
+}
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #e52521;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    border: 3px solid #8b0000;
+    border-radius: 10px;
+    box-shadow: 0 5px 0 #8b0000;
+}
+
+nav a:hover {
+    background: #ffcc00;
+    color: #222;
+}
+
+.cena {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #29a9ed, #a8eaff);
+}
+
+.sol {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 80px;
+    left: 10%;
+    background: #ffd928;
+    border-radius: 50%;
+    box-shadow: 0 0 35px #fff176;
+}
+
+.nuvem {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    background: white;
+    border-radius: 30px;
+}
+
+.nuvem::before,
+.nuvem::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.nuvem::before {
+    width: 60px;
+    height: 60px;
+    left: 15px;
+    bottom: 8px;
+}
+
+.nuvem::after {
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    bottom: 7px;
+}
+
+.nuvem1 {
+    top: 100px;
+    left: 35%;
+}
+
+.nuvem2 {
+    top: 160px;
+    right: 12%;
+    transform: scale(.8);
+}
+
+.nuvem3 {
+    top: 260px;
+    left: 5%;
+    transform: scale(.6);
+}
+
+.montanha {
+    position: absolute;
+    bottom: 110px;
+    background: #55bde7;
+    border-radius: 100% 100% 0 0;
+}
+
+.montanha1 {
+    width: 280px;
+    height: 230px;
+    left: -40px;
+}
+
+.montanha2 {
+    width: 330px;
+    height: 270px;
+    left: 35%;
+}
+
+.montanha3 {
+    width: 250px;
+    height: 210px;
+    right: -30px;
+}
+
+.bloco {
+    position: absolute;
+    display: flex;
+    gap: 3px;
+    z-index: 10;
+}
+
+.grupo1 {
+    top: 340px;
+    left: 32%;
+}
+
+.grupo2 {
+    top: 400px;
+    right: 22%;
+}
+
+.bloco span,
+.pergunta {
+    width: 55px;
+    height: 55px;
+    border: 4px solid #7a3600;
+    border-radius: 5px;
+}
+
+.bloco span {
+    background: linear-gradient(#d96b20, #a83f0d);
+}
+
+.pergunta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffc928;
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: 2px 2px #9b6500;
+    border-color: #9b6500;
+}
+
+.moeda {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffd21c;
+    border: 4px solid #d99b00;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    z-index: 12;
+}
+
+.moeda1 {
+    top: 260px;
+    left: 58%;
+}
+
+.moeda2 {
+    top: 260px;
+    left: 65%;
+}
+
+.moeda3 {
+    top: 320px;
+    right: 15%;
+}
+
+.cano {
+    position: absolute;
+    bottom: 120px;
+    width: 100px;
+    height: 145px;
+    z-index: 11;
+}
+
+.cano1 {
+    left: 8%;
+}
+
+.cano2 {
+    right: 8%;
+}
+
+.topo-cano {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 116px;
+    height: 38px;
+    background: linear-gradient(to right, #08751c, #3bd41c, #08751c);
+    border: 4px solid #075914;
+    border-radius: 8px;
+}
+
+.corpo-cano {
+    position: absolute;
+    top: 31px;
+    left: 8px;
+    width: 84px;
+    height: 114px;
+    background: linear-gradient(to right, #086b18, #39c91c, #086b18);
+    border-left: 4px solid #075914;
+    border-right: 4px solid #075914;
+}
+
+.chao {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: #a85a25;
+    z-index: 15;
+}
+
+.grama {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: #65d324;
+    border-bottom: 8px solid #419b18;
+}
+
+.terra {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background:
+        radial-gradient(circle at 20px 25px, #d77a2c 8px, transparent 9px),
+        radial-gradient(circle at 80px 60px, #d77a2c 10px, transparent 11px),
+        #a85a25;
+    background-size: 120px 90px;
+}
+
+.mario {
+    position: absolute;
+    left: 50px;
+    bottom: 120px;
+    width: 44px;
+    height: 60px;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.mario .chapeu {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 30px;
+    height: 10px;
+    background: #e52521;
+    border: 2px solid #8b0000;
+    border-radius: 5px 5px 0 0;
+}
+
+.mario .rosto {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 25px;
+    height: 17px;
+    background: #ffbd78;
+    border: 1px solid #8b5a36;
+}
+
+.mario .olho {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 4px;
+    height: 6px;
+    background: #222;
+}
+
+.mario .bigode {
+    position: absolute;
+    bottom: 1px;
+    left: 3px;
+    width: 17px;
+    height: 5px;
+    background: #59331d;
+}
+
+.mario .camisa {
+    position: absolute;
+    top: 27px;
+    left: 5px;
+    width: 30px;
+    height: 15px;
+    background: #e52521;
+}
+
+.mario .macacao {
+    position: absolute;
+    top: 34px;
+    left: 9px;
+    width: 22px;
+    height: 15px;
+    background: #1769d2;
+    border: 2px solid #10458a;
+}
+
+.mario .botao {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    background: #ffdf35;
+    box-shadow: 8px 0 #ffdf35;
+}
+
+.mario .perna {
+    position: absolute;
+    top: 48px;
+    width: 10px;
+    height: 5px;
+    background: #1769d2;
+}
+
+.mario .perna1 {
+    left: 8px;
+}
+
+.mario .perna2 {
+    left: 23px;
+}
+
+.mario .sapato {
+    position: absolute;
+    bottom: 0;
+    width: 17px;
+    height: 7px;
+    background: #66351e;
+    border-bottom: 2px solid #3d2012;
+}
+
+.mario .sapato1 {
+    left: 0;
+}
+
+.mario .sapato2 {
+    right: 0;
+}
+
+.mario-controles {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.mario-controles button {
+    width: 58px;
+    height: 52px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background: white;
+    color: #222;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 0 #777;
+    touch-action: none;
+    pointer-events: auto;
+}
+
+.mario-controles button:active {
+    background: #ffcc00;
+    transform: translateY(3px);
+}
+
+@media (max-width: 600px) {
+    .cena {
+        height: 700px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+
+    .grupo1 {
+        left: 35%;
+    }
+
+    .grupo2 {
+        right: 5%;
+    }
+
+    .montanha2 {
+        left: 30%;
+    }
+}
